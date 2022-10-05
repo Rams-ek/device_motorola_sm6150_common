@@ -8,3 +8,7 @@ git clone https://github.com/ArrowOS/android_hardware_qcom_display -b arrow-13.0
 # Create ld symlink to avoid linking error(s)
 ln -s $(pwd)/prebuilts/clang/host/linux-x86/clang-r450784d/bin/lld \
     $(pwd)/prebuilts/clang/host/linux-x86/clang-r450784d/bin/ld &> /dev/null
+
+git clone https://gitlab.com/NemesisDevelopers/moto-camera/motorola_camera2_whitney.git -b eleven-arm64 packages/apps/MotCamera2
+git clone https://gitlab.com/NemesisDevelopers/moto-camera/motorola_camera2_overlay.git -b ten packages/apps/MotCamera2-overlay
+git clone https://gitlab.com/NemesisDevelopers/motorola/motorola_motosignatureapp.git -b eleven packages/apps/MotoSignatureApp
