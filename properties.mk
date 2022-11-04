@@ -10,7 +10,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
     persist.vendor.audio.dualmic.config=endfire \
     persist.vendor.audio.fluence.voicecall=false \
     persist.vendor.audio.fluence.voicecomm=false \
-    persist.vendor.audio.fluence.voicerec=false \
+    persist.vendor.audio.fluence.voicerec=true \
     persist.vendor.audio.fluence.speaker=false \
     ro.vendor.audio.sdk.fluencetype=fluence \
     ro.vendor.audio.sdk.ssr=false \
@@ -325,3 +325,6 @@ PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
 
 PRODUCT_PROPERTY_OVERRIDES += \
     zygote.critical_window.minute=10
+
+#volume_steps
+ro.config.vc_call_vol_steps=8
