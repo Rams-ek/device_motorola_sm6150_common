@@ -454,3 +454,14 @@ on property:vendor.wifi.station=true
 
 on property:vendor.wifi.station=false
     write /sys/module/wlan/parameters/sar_sta disabled
+
+#metadata_logger (take log on bootloop)
+service logger /system/bin/logcat -b all -D -f /metadata/boot_log.txt
+    class main
+    user root
+    group root system
+    disabled
+    oneshot
+
+on boot
+    start logger
